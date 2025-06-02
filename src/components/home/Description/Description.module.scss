@@ -9,7 +9,19 @@
     width: 500px;
     height: 300px;
     margin-right: 2rem;
-
+  }
+  &__button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    &:hover {
+      background: transparent;
+    }
+    &--border {
+        img {
+          border: 3px solid $color-danger;
+      }
+    }
   }
   img {
     object-fit: cover;
