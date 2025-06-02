@@ -1,0 +1,84 @@
+@import "variables.scss";
+
+// Reset básico
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $color-primary;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  color: $color-text;
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+// Enlaces
+a {
+  color: $color-accent;
+  text-decoration: none;
+  transition: color 0.2s;
+
+  &:hover,
+  &:focus {
+    color: darken($color-accent, 10%);
+    text-decoration: underline;
+  }
+}
+
+// Imágenes responsivas
+img {
+  max-width: 100%;
+  display: block;
+}
+
+// Botones básicos
+button {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.75em 1.5em;
+  border: none;
+  border-radius: 4px;
+  background: $color-accent;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+
+  &:hover,
+  &:focus {
+    background: darken($color-accent, 10%);
+  }
+}
+
+// Utilidades
+.hide {
+  display: none !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.mt-1 { margin-top: 1rem !important; }
+.mb-1 { margin-bottom: 1rem !important; }
+.pt-1 { padding-top: 1rem !important; }
+.pb-1 { padding-bottom: 1rem !important; }
+
+// Scrollbar personalizado (opcional)
+::-webkit-scrollbar {
+  width: 8px;
+  background: lighten($color-primary, 10%);
+}
+::-webkit-scrollbar-thumb {
+  background: $color-accent;
+  border-radius: 4px;
+}
