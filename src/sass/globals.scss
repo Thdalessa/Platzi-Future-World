@@ -1,5 +1,4 @@
-@import "variables.scss";
-
+@use 'sass:color';
 // Reset básico
 *,
 *::before,
@@ -30,7 +29,7 @@ a {
 
   &:hover,
   &:focus {
-    color: darken($color-accent, 10%);
+    color: color.adjust($color-accent, $lightness: -10%);
     text-decoration: underline;
   }
 }
@@ -55,7 +54,7 @@ button {
 
   &:hover,
   &:focus {
-    background: darken($color-accent, 10%);
+    background: color.adjust($color-accent, $lightness: -10%);
   }
 }
 
@@ -76,7 +75,7 @@ button {
 // Scrollbar personalizado (opcional)
 ::-webkit-scrollbar {
   width: 8px;
-  background: lighten($color-primary, 10%);
+  background: color.adjust($color-primary, $lightness: 10%);
 }
 ::-webkit-scrollbar-thumb {
   background: $color-accent;
