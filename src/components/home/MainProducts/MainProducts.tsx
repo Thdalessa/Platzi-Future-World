@@ -19,7 +19,6 @@ const getProducts = async () => {
 
 const MainProducts = async () => {
   const products = await getProducts();
-  console.log(products, process.env.SHOPIFY_HOSTNAME);
   return (
     <section className={styles.MainProducts}>
       <h2>New products released!</h2>
